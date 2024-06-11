@@ -2,27 +2,29 @@ import pandas as pd
 import os
 
 def createContactCSV():
-    if os.path.exists('contacts.csv'):
-        pass
-    else:
+    if not os.path.exists('contacts.csv'):
         df = pd.DataFrame(columns=['Name', 'Phone', 'Email'])
-        df.to_csv('cotacts.csv', index=False)
+        df.to_csv('contacts.csv', index=False)
         
 def contact_menu():
-    print("Contact Menu")
+    print("\nContact Menu")
     print("1. Display all contacts")
     print("2. Add a contact")
     print("3. Search for a contact")
     print("4. Update a contact")
     print("5. Delete a contact")
-    print("6. Reste contacts")
+    print("6. Reset contacts")
     print("7. Exit")
 
-    choice = int(input("Enter your choice: "))
-    if choice > 7 or choice < 0:
-        print("Invalid choice. Please choose a valid option.")
-        choice = contact_menu()
-    return choice
+    while True:
+        try:
+            choice = int(input("Enter your choice: "))
+            if 1 <= choice <= 7:
+                return choice
+            else:
+                print("Invalid choice. Please choose a valid option.")
+        except ValueError:
+            print("Invalid input. Please enter a number between 1 and 7.")
 
 def action(choice):
     df = pd.read_csv('contacts.csv')
@@ -36,18 +38,24 @@ def action(choice):
         df_updated.to_csv('contacts.csv', index=False)
     
     def search_contact(data):
+        print("Searching for:", data)
         if data.isdigit():
+            print("Searching by Phone")
             result = df[df['Phone'] == data]
         elif '@' in data:
+            print("Searching by Email")
             result = df[df['Email'] == data]
         else:
+            print("Searching by Name")
             result = df[df['Name'].str.contains(data, case=False, na=False)]
         
         if result.empty:
             print("Contact not found")
         else:
+            print("Contact found:")
             print(result)
-            return result
+        return result
+
 
     def update_contact(data):
         res = search_contact(data)
@@ -59,7 +67,7 @@ def action(choice):
             new_name = input("Enter new name: ")
             df.loc[res.index, 'Name'] = new_name
         elif update == 'P':
-            new_phone = input("Enter new phone: ")
+            new_phone = str(input("Enter new phone: "))
             df.loc[res.index, 'Phone'] = new_phone
         elif update == 'E':
             new_email = input("Enter new email: ")
@@ -98,9 +106,6 @@ def action(choice):
             reset_contacts()
         else:
             print("Reset cancelled")
-
-
-
 
 createContactCSV()
 choice = contact_menu()
