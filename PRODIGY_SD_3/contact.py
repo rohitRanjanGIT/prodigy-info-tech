@@ -30,7 +30,13 @@ def action(choice):
     df = pd.read_csv('contacts.csv')
 
     def display_contacts():
-        print(df)
+        if len(df) <= 0:
+            print("No entries found")
+        elif len(df.columns) == 3 and all(col in ['Name', 'Phone', 'Email'] for col in df.columns):
+            print("No entries found")
+        else:
+            print(df)
+
 
     def add_contact(name, phone, email):
         new_contact = pd.DataFrame({'Name': [name], 'Phone': [phone], 'Email': [email]})
