@@ -58,4 +58,5 @@ def guessGame():
     print("You have completed all the games.")
     print("Your total score is:", totalScore)
 
+
 guessGame()
