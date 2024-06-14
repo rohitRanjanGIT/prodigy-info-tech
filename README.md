@@ -8,22 +8,22 @@
   <li>
     <h3>PRODIGY_SD_1: Temperature Conversion Program</h3>
     <p>This project involves writing a program to convert temperatures between Celsius and Fahrenheit. It's a fundamental exercise in understanding conditional statements and basic arithmetic operations.</p>
-    <p><a href="https://replit.com/join/tfsukpooks-rohitranjan3" target="_blank">Check the working of code</a></p>
+    <p><a href="https://replit.com/@RohitRanjan3/temp-converter?v=1" target="_blank">Check the working of code</a></p>
   </li>
   <li>
     <h3>PRODIGY_SD_2: Guessing Game</h3>
-    <p>The guessing game is an interactive console-based application where the user has to guess a randomly generated number within a specified range depending on the level yo choose. It enhances skills in generating random numbers and implementing loops and conditional logic.</p>
-    <p><a href="https://replit.com/join/xzhozgokuk-rohitranjan3" target="_blank">Check the working of code</a></p>
+    <p>The guessing game is an interactive console-based application where the user has to guess a randomly generated number within a specified range depending on the level you choose. It enhances skills in generating random numbers and implementing loops and conditional logic.</p>
+    <p><a href="https://replit.com/@RohitRanjan3/Guess-game?v=1" target="_blank">Check the working of code</a></p>
   </li>
   <li>
     <h3>PRODIGY_SD_3: Simple Contact Management System</h3>
     <p>This project is a basic contact management system that allows users to add, view, and delete contacts. It provides practical experience in working with data structures and file handling. CSV file is stored to store all the data and to perform the actual operations, Python-pandas library has been used.</p>
-    <p><a href="https://replit.com/join/zegwhacnts-rohitranjan3" target="_blank">Check the working of code</a></p>
+    <p><a href="https://replit.com/@RohitRanjan3/contact-manager?v=1" target="_blank">Check the working of code</a></p>
   </li>
   <li>
     <h3>PRODIGY_SD_4: Sudoku Solver</h3>
     <p>The Sudoku Solver project involves creating a program to solve Sudoku puzzles. It applies backtracking algorithms and demonstrates problem-solving and logical thinking skills.</p>
-    <p><a href="https://replit.com/join/ojzxbgfeqy-rohitranjan3" target="_blank">Check the working of code</a></p>
+    <p><a href="https://replit.com/@RohitRanjan3/sudoku?v=1" target="_blank">Check the working of code</a></p>
   </li>
 </ol>
 
